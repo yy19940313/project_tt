@@ -14,6 +14,13 @@
 		7905E7EF2C40AFAC0010648F /* project_ttTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E7EE2C40AFAC0010648F /* project_ttTests.swift */; };
 		7905E7F92C40AFAC0010648F /* project_ttUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E7F82C40AFAC0010648F /* project_ttUITests.swift */; };
 		7905E7FB2C40AFAC0010648F /* project_ttUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E7FA2C40AFAC0010648F /* project_ttUITestsLaunchTests.swift */; };
+		7905E8082C40B3AF0010648F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8072C40B3AF0010648F /* SignInView.swift */; };
+		7905E80A2C40F7270010648F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8092C40F7270010648F /* SignUpView.swift */; };
+		7905E80C2C41A52C0010648F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E80B2C41A52C0010648F /* LoadingView.swift */; };
+		7905E8122C41BC3C0010648F /* MerriweatherSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */; };
+		7905E8152C41BE1A0010648F /* Rubik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7905E8142C41BE1A0010648F /* Rubik.ttf */; };
+		7905E8182C41E3C10010648F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8172C41E3C10010648F /* ChatView.swift */; };
+		7905E81A2C41F3D50010648F /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8192C41F3D50010648F /* ProfileSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,14 @@
 		7905E7F42C40AFAC0010648F /* project_ttUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = project_ttUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7905E7F82C40AFAC0010648F /* project_ttUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_ttUITests.swift; sourceTree = "<group>"; };
 		7905E7FA2C40AFAC0010648F /* project_ttUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_ttUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7905E8072C40B3AF0010648F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		7905E8092C40F7270010648F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7905E80B2C41A52C0010648F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MerriweatherSans.ttf; sourceTree = "<group>"; };
+		7905E8132C41BC560010648F /* project-tt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "project-tt-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7905E8142C41BE1A0010648F /* Rubik.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rubik.ttf; sourceTree = "<group>"; };
+		7905E8172C41E3C10010648F /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		7905E8192C41F3D50010648F /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +109,18 @@
 		7905E7DC2C40AFAA0010648F /* project_tt */ = {
 			isa = PBXGroup;
 			children = (
+				7905E8142C41BE1A0010648F /* Rubik.ttf */,
+				7905E8132C41BC560010648F /* project-tt-Info.plist */,
+				7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */,
 				7905E7DD2C40AFAA0010648F /* project_ttApp.swift */,
 				7905E7DF2C40AFAA0010648F /* ContentView.swift */,
 				7905E7E12C40AFAB0010648F /* Assets.xcassets */,
 				7905E7E32C40AFAB0010648F /* Preview Content */,
+				7905E8072C40B3AF0010648F /* SignInView.swift */,
+				7905E8092C40F7270010648F /* SignUpView.swift */,
+				7905E80B2C41A52C0010648F /* LoadingView.swift */,
+				7905E8172C41E3C10010648F /* ChatView.swift */,
+				7905E8192C41F3D50010648F /* ProfileSettingsView.swift */,
 			);
 			path = project_tt;
 			sourceTree = "<group>";
@@ -215,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 7905E7D12C40AFAA0010648F;
+			packageReferences = (
+				7905E8162C41E36C0010648F /* XCRemoteSwiftPackageReference "Chat" */,
+			);
 			productRefGroup = 7905E7DB2C40AFAA0010648F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,7 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7905E8122C41BC3C0010648F /* MerriweatherSans.ttf in Resources */,
 				7905E7E52C40AFAB0010648F /* Preview Assets.xcassets in Resources */,
+				7905E8152C41BE1A0010648F /* Rubik.ttf in Resources */,
 				7905E7E22C40AFAB0010648F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7905E8082C40B3AF0010648F /* SignInView.swift in Sources */,
+				7905E80A2C40F7270010648F /* SignUpView.swift in Sources */,
+				7905E80C2C41A52C0010648F /* LoadingView.swift in Sources */,
 				7905E7E02C40AFAA0010648F /* ContentView.swift in Sources */,
+				7905E8182C41E3C10010648F /* ChatView.swift in Sources */,
 				7905E7DE2C40AFAA0010648F /* project_ttApp.swift in Sources */,
+				7905E81A2C41F3D50010648F /* ProfileSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +458,7 @@
 				DEVELOPMENT_TEAM = D4QJPH29DF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "project-tt-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +488,7 @@
 				DEVELOPMENT_TEAM = D4QJPH29DF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "project-tt-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +623,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7905E8162C41E36C0010648F /* XCRemoteSwiftPackageReference "Chat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/Chat.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 7905E7D22C40AFAA0010648F /* Project object */;
 }
