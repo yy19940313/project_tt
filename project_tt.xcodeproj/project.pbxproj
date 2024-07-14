@@ -19,7 +19,7 @@
 		7905E80C2C41A52C0010648F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E80B2C41A52C0010648F /* LoadingView.swift */; };
 		7905E8122C41BC3C0010648F /* MerriweatherSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */; };
 		7905E8152C41BE1A0010648F /* Rubik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7905E8142C41BE1A0010648F /* Rubik.ttf */; };
-		7905E8182C41E3C10010648F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8172C41E3C10010648F /* ChatView.swift */; };
+		7905E8182C41E3C10010648F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8172C41E3C10010648F /* DashboardView.swift */; };
 		7905E81A2C41F3D50010648F /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8192C41F3D50010648F /* ProfileSettingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,7 @@
 		7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MerriweatherSans.ttf; sourceTree = "<group>"; };
 		7905E8132C41BC560010648F /* project-tt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "project-tt-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7905E8142C41BE1A0010648F /* Rubik.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rubik.ttf; sourceTree = "<group>"; };
-		7905E8172C41E3C10010648F /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		7905E8172C41E3C10010648F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7905E8192C41F3D50010648F /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +119,7 @@
 				7905E8072C40B3AF0010648F /* SignInView.swift */,
 				7905E8092C40F7270010648F /* SignUpView.swift */,
 				7905E80B2C41A52C0010648F /* LoadingView.swift */,
-				7905E8172C41E3C10010648F /* ChatView.swift */,
+				7905E8172C41E3C10010648F /* DashboardView.swift */,
 				7905E8192C41F3D50010648F /* ProfileSettingsView.swift */,
 			);
 			path = project_tt;
@@ -289,7 +289,7 @@
 				7905E80A2C40F7270010648F /* SignUpView.swift in Sources */,
 				7905E80C2C41A52C0010648F /* LoadingView.swift in Sources */,
 				7905E7E02C40AFAA0010648F /* ContentView.swift in Sources */,
-				7905E8182C41E3C10010648F /* ChatView.swift in Sources */,
+				7905E8182C41E3C10010648F /* DashboardView.swift in Sources */,
 				7905E7DE2C40AFAA0010648F /* project_ttApp.swift in Sources */,
 				7905E81A2C41F3D50010648F /* ProfileSettingsView.swift in Sources */,
 			);
