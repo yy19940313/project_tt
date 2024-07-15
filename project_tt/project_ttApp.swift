@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct project_ttApp: App {
+
     var body: some Scene {
         WindowGroup {
             LoadingView()
         }
     }
 }
+
+

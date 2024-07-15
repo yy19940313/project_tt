@@ -5,11 +5,16 @@
 //  Created by Yi Y on 7/11/24.
 //
 
-
 import SwiftUI
 
 struct SignInView: View {
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var showSignUp: Bool = false
+    @State private var showHome: Bool = false // For navigation after successful login
+    
     var body: some View {
+        NavigationView {
             ZStack {
                 
                 // Background Color
@@ -34,7 +39,7 @@ struct SignInView: View {
                             Text("Email Address")
                                 .font(Font.custom("Rubik", size: 14).weight(.light))
                                 .foregroundColor(Color(red: 0, green: 0.15, blue: 0.29).opacity(0.60))
-                            TextField("Enter your email", text: .constant("vivian_shi_1990@gmail.com"))
+                            TextField("Enter your email", text: $email)
                                 .padding()
                                 .background(Color.white)
                                 .cornerRadius(8)
@@ -49,7 +54,7 @@ struct SignInView: View {
                             Text("Password")
                                 .font(Font.custom("Rubik", size: 14).weight(.light))
                                 .foregroundColor(Color(red: 0, green: 0.15, blue: 0.29).opacity(0.60))
-                            SecureField("Enter your password", text: .constant("************"))
+                            SecureField("Enter your password", text: $password)
                                 .padding()
                                 .background(Color.white)
                                 .cornerRadius(8)
@@ -62,19 +67,23 @@ struct SignInView: View {
                     .padding(.horizontal, 30)
                     .padding(.bottom, 20)
                     
-                    // Sign up button
-                    Text("Sign In")
-                        .font(Font.custom("Rubik", size: 18).weight(.bold))
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 320, height: 48)
-                        .background(Color(red: 0.93, green: 0.04, blue: 0.26))
-                        .cornerRadius(32)
-                        .padding(.bottom, 20) // Add spacing below the button
+                    // Sign in button
+                    Button(action: {
+                        signIn()
+                    }) {
+                        Text("Sign In")
+                            .font(Font.custom("Rubik", size: 18).weight(.bold))
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 320, height: 48)
+                            .background(Color(red: 0.93, green: 0.04, blue: 0.26))
+                            .cornerRadius(32)
+                    }
+                    .padding(.bottom, 20) // Add spacing below the button
                     
-                    // "Already have an account? Log in here" text
+                    // "Don't have an account? Sign Up" text
                     
-                    NavigationLink(destination: SignUpView()) {
+                    NavigationLink(destination: SignUpView(), isActive: $showSignUp) {
                         Text("Don't have an account? ")
                             .font(Font.custom("Rubik", size: 14).weight(.light)) +
                         Text("Sign Up")
@@ -91,16 +100,26 @@ struct SignInView: View {
             }
             .background(Color.white)
             .edgesIgnoringSafeArea(.all)
-            //.navigationTitle("Sign In")
         }
     }
-
-
+    
+    func signIn() {
+        // Placeholder for sign-in logic
+        // Implement your authentication logic here, e.g., call to a backend server
+        print("Email: \(email)")
+        print("Password: \(password)")
+        
+        // Simulate successful sign-in
+        if email == "test@example.com" && password == "password" {
+            showHome = true
+        } else {
+            // Handle sign-in error
+        }
+    }
+}
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            SignInView()
-        }
+        SignInView()
     }
 }

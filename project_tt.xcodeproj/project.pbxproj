@@ -20,7 +20,20 @@
 		7905E8122C41BC3C0010648F /* MerriweatherSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */; };
 		7905E8152C41BE1A0010648F /* Rubik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7905E8142C41BE1A0010648F /* Rubik.ttf */; };
 		7905E8182C41E3C10010648F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8172C41E3C10010648F /* DashboardView.swift */; };
-		7905E81A2C41F3D50010648F /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8192C41F3D50010648F /* ProfileSettingsView.swift */; };
+		7905E81A2C41F3D50010648F /* CreateOwnGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8192C41F3D50010648F /* CreateOwnGroupView.swift */; };
+		7905E81D2C4379AA0010648F /* PubNubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E81C2C4379AA0010648F /* PubNubManager.swift */; };
+		7905E8202C4384BB0010648F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E81F2C4384BB0010648F /* UserManager.swift */; };
+		797EB77A2C44523300601F61 /* GroupSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB7792C44523300601F61 /* GroupSettingView.swift */; };
+		797EB77C2C44590700601F61 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB77B2C44590700601F61 /* EditProfileView.swift */; };
+		797EB77E2C445B7200601F61 /* PersonalProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB77D2C445B7200601F61 /* PersonalProfileView.swift */; };
+		797EB7802C445C4D00601F61 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB77F2C445C4D00601F61 /* ProfileData.swift */; };
+		797EB7822C445D9600601F61 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB7812C445D9600601F61 /* ImagePicker.swift */; };
+		797EB7872C44952600601F61 /* project-tt-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 797EB7862C44952600601F61 /* project-tt-Info.plist */; };
+		7986E5372C438A0200BD232B /* PubNub in Frameworks */ = {isa = PBXBuildFile; productRef = 7986E5362C438A0200BD232B /* PubNub */; };
+		7986E5392C438A0200BD232B /* PubNubMembership in Frameworks */ = {isa = PBXBuildFile; productRef = 7986E5382C438A0200BD232B /* PubNubMembership */; };
+		7986E53B2C438A0200BD232B /* PubNubSpace in Frameworks */ = {isa = PBXBuildFile; productRef = 7986E53A2C438A0200BD232B /* PubNubSpace */; };
+		7986E53D2C438A0200BD232B /* PubNubUser in Frameworks */ = {isa = PBXBuildFile; productRef = 7986E53C2C438A0200BD232B /* PubNubUser */; };
+		7986E53F2C438C3E00BD232B /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7986E53E2C438C3E00BD232B /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +68,18 @@
 		7905E8092C40F7270010648F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7905E80B2C41A52C0010648F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MerriweatherSans.ttf; sourceTree = "<group>"; };
-		7905E8132C41BC560010648F /* project-tt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "project-tt-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7905E8142C41BE1A0010648F /* Rubik.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rubik.ttf; sourceTree = "<group>"; };
 		7905E8172C41E3C10010648F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		7905E8192C41F3D50010648F /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
+		7905E8192C41F3D50010648F /* CreateOwnGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOwnGroupView.swift; sourceTree = "<group>"; };
+		7905E81C2C4379AA0010648F /* PubNubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubNubManager.swift; sourceTree = "<group>"; };
+		7905E81F2C4384BB0010648F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		797EB7792C44523300601F61 /* GroupSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingView.swift; sourceTree = "<group>"; };
+		797EB77B2C44590700601F61 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		797EB77D2C445B7200601F61 /* PersonalProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileView.swift; sourceTree = "<group>"; };
+		797EB77F2C445C4D00601F61 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		797EB7812C445D9600601F61 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		797EB7862C44952600601F61 /* project-tt-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "project-tt-Info.plist"; sourceTree = "<group>"; };
+		7986E53E2C438C3E00BD232B /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7986E5392C438A0200BD232B /* PubNubMembership in Frameworks */,
+				7986E53D2C438A0200BD232B /* PubNubUser in Frameworks */,
+				7986E53B2C438A0200BD232B /* PubNubSpace in Frameworks */,
+				7986E5372C438A0200BD232B /* PubNub in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,18 +134,20 @@
 		7905E7DC2C40AFAA0010648F /* project_tt */ = {
 			isa = PBXGroup;
 			children = (
-				7905E8142C41BE1A0010648F /* Rubik.ttf */,
-				7905E8132C41BC560010648F /* project-tt-Info.plist */,
-				7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */,
+				797EB7862C44952600601F61 /* project-tt-Info.plist */,
+				797EB7852C44933A00601F61 /* Profile */,
+				797EB7842C44932600601F61 /* Login */,
+				797EB7832C44930000601F61 /* Resources */,
+				7905E81B2C4379900010648F /* SDKs */,
 				7905E7DD2C40AFAA0010648F /* project_ttApp.swift */,
 				7905E7DF2C40AFAA0010648F /* ContentView.swift */,
 				7905E7E12C40AFAB0010648F /* Assets.xcassets */,
 				7905E7E32C40AFAB0010648F /* Preview Content */,
-				7905E8072C40B3AF0010648F /* SignInView.swift */,
-				7905E8092C40F7270010648F /* SignUpView.swift */,
-				7905E80B2C41A52C0010648F /* LoadingView.swift */,
 				7905E8172C41E3C10010648F /* DashboardView.swift */,
-				7905E8192C41F3D50010648F /* ProfileSettingsView.swift */,
+				7905E8192C41F3D50010648F /* CreateOwnGroupView.swift */,
+				7986E53E2C438C3E00BD232B /* ChatView.swift */,
+				797EB7792C44523300601F61 /* GroupSettingView.swift */,
+				797EB7812C445D9600601F61 /* ImagePicker.swift */,
 			);
 			path = project_tt;
 			sourceTree = "<group>";
@@ -150,6 +177,52 @@
 			path = project_ttUITests;
 			sourceTree = "<group>";
 		};
+		7905E81B2C4379900010648F /* SDKs */ = {
+			isa = PBXGroup;
+			children = (
+				7905E81C2C4379AA0010648F /* PubNubManager.swift */,
+				7905E81F2C4384BB0010648F /* UserManager.swift */,
+			);
+			path = SDKs;
+			sourceTree = "<group>";
+		};
+		797EB7832C44930000601F61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7986E5342C4388C600BD232B /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		797EB7842C44932600601F61 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7905E8072C40B3AF0010648F /* SignInView.swift */,
+				7905E8092C40F7270010648F /* SignUpView.swift */,
+				7905E80B2C41A52C0010648F /* LoadingView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		797EB7852C44933A00601F61 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				797EB77B2C44590700601F61 /* EditProfileView.swift */,
+				797EB77D2C445B7200601F61 /* PersonalProfileView.swift */,
+				797EB77F2C445C4D00601F61 /* ProfileData.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7986E5342C4388C600BD232B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7905E8112C41BC3C0010648F /* MerriweatherSans.ttf */,
+				7905E8142C41BE1A0010648F /* Rubik.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +239,12 @@
 			dependencies = (
 			);
 			name = project_tt;
+			packageProductDependencies = (
+				7986E5362C438A0200BD232B /* PubNub */,
+				7986E5382C438A0200BD232B /* PubNubMembership */,
+				7986E53A2C438A0200BD232B /* PubNubSpace */,
+				7986E53C2C438A0200BD232B /* PubNubUser */,
+			);
 			productName = project_tt;
 			productReference = 7905E7DA2C40AFAA0010648F /* project_tt.app */;
 			productType = "com.apple.product-type.application";
@@ -239,7 +318,7 @@
 			);
 			mainGroup = 7905E7D12C40AFAA0010648F;
 			packageReferences = (
-				7905E8162C41E36C0010648F /* XCRemoteSwiftPackageReference "Chat" */,
+				7986E5352C43891900BD232B /* XCRemoteSwiftPackageReference "swift" */,
 			);
 			productRefGroup = 7905E7DB2C40AFAA0010648F /* Products */;
 			projectDirPath = "";
@@ -259,6 +338,7 @@
 			files = (
 				7905E8122C41BC3C0010648F /* MerriweatherSans.ttf in Resources */,
 				7905E7E52C40AFAB0010648F /* Preview Assets.xcassets in Resources */,
+				797EB7872C44952600601F61 /* project-tt-Info.plist in Resources */,
 				7905E8152C41BE1A0010648F /* Rubik.ttf in Resources */,
 				7905E7E22C40AFAB0010648F /* Assets.xcassets in Resources */,
 			);
@@ -285,13 +365,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7905E8202C4384BB0010648F /* UserManager.swift in Sources */,
 				7905E8082C40B3AF0010648F /* SignInView.swift in Sources */,
+				797EB77E2C445B7200601F61 /* PersonalProfileView.swift in Sources */,
+				7986E53F2C438C3E00BD232B /* ChatView.swift in Sources */,
+				797EB77A2C44523300601F61 /* GroupSettingView.swift in Sources */,
 				7905E80A2C40F7270010648F /* SignUpView.swift in Sources */,
 				7905E80C2C41A52C0010648F /* LoadingView.swift in Sources */,
+				797EB77C2C44590700601F61 /* EditProfileView.swift in Sources */,
 				7905E7E02C40AFAA0010648F /* ContentView.swift in Sources */,
+				797EB7802C445C4D00601F61 /* ProfileData.swift in Sources */,
 				7905E8182C41E3C10010648F /* DashboardView.swift in Sources */,
+				7905E81D2C4379AA0010648F /* PubNubManager.swift in Sources */,
+				797EB7822C445D9600601F61 /* ImagePicker.swift in Sources */,
 				7905E7DE2C40AFAA0010648F /* project_ttApp.swift in Sources */,
-				7905E81A2C41F3D50010648F /* ProfileSettingsView.swift in Sources */,
+				7905E81A2C41F3D50010648F /* CreateOwnGroupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = /Users/yiy/Documents/GitHub/Project_TT/project_tt/project_tt/project_tt_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -437,6 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = /Users/yiy/Documents/GitHub/Project_TT/project_tt/project_tt/project_tt_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -458,7 +548,8 @@
 				DEVELOPMENT_TEAM = D4QJPH29DF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "project-tt-Info.plist";
+				INFOPLIST_FILE = "/Users/yiy/Documents/GitHub/Project_TT/project_tt/project_tt/project-tt-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sip;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -488,7 +579,8 @@
 				DEVELOPMENT_TEAM = D4QJPH29DF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "project-tt-Info.plist";
+				INFOPLIST_FILE = "/Users/yiy/Documents/GitHub/Project_TT/project_tt/project_tt/project-tt-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sip;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -516,6 +608,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D4QJPH29DF;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "/Users/yiy/Documents/GitHub/Project_TT/project_tt/project_tt/project-tt-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "yiyang.project-ttTests";
@@ -536,6 +629,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D4QJPH29DF;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "/Users/yiy/Documents/GitHub/Project_TT/project_tt/project_tt/project-tt-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "yiyang.project-ttTests";
@@ -555,6 +649,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D4QJPH29DF;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "/Users/yiy/Documents/GitHub/Project_TT/project_tt/project_tt/project-tt-Info.plist";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "yiyang.project-ttUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -573,6 +668,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D4QJPH29DF;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "/Users/yiy/Documents/GitHub/Project_TT/project_tt/project_tt/project-tt-Info.plist";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "yiyang.project-ttUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -625,15 +721,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7905E8162C41E36C0010648F /* XCRemoteSwiftPackageReference "Chat" */ = {
+		7986E5352C43891900BD232B /* XCRemoteSwiftPackageReference "swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/Chat.git";
+			repositoryURL = "https://github.com/pubnub/swift";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.1;
+				minimumVersion = 7.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7986E5362C438A0200BD232B /* PubNub */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7986E5352C43891900BD232B /* XCRemoteSwiftPackageReference "swift" */;
+			productName = PubNub;
+		};
+		7986E5382C438A0200BD232B /* PubNubMembership */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7986E5352C43891900BD232B /* XCRemoteSwiftPackageReference "swift" */;
+			productName = PubNubMembership;
+		};
+		7986E53A2C438A0200BD232B /* PubNubSpace */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7986E5352C43891900BD232B /* XCRemoteSwiftPackageReference "swift" */;
+			productName = PubNubSpace;
+		};
+		7986E53C2C438A0200BD232B /* PubNubUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7986E5352C43891900BD232B /* XCRemoteSwiftPackageReference "swift" */;
+			productName = PubNubUser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7905E7D22C40AFAA0010648F /* Project object */;
 }

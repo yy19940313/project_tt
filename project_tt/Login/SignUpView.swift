@@ -30,6 +30,8 @@ struct SignUpView: View {
     @State private var username: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
+    @ObservedObject var profileData = ProfileData()
+    @State private var showingPersonalProfile = false
     
     var body: some View {
         ZStack {
@@ -59,17 +61,19 @@ struct SignUpView: View {
                 .padding(.bottom, 20)
                 
                 // Sign up button
-                Button(action: {
-                    signUp()
-                }) {
-                    Text("Sign Up")
-                        .font(Font.custom("Rubik", size: 18).weight(.bold))
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 320, height: 48)
-                        .background(Color(red: 0.93, green: 0.04, blue: 0.26))
-                        .cornerRadius(32)
-                        .padding(.bottom, 20) // Add spacing below the button
+                NavigationLink(destination: PersonalProfileView(profileData: profileData), isActive: $showingPersonalProfile) {
+                    Button(action: {
+                        signUp()
+                    }) {
+                        Text("Sign Up")
+                            .font(Font.custom("Rubik", size: 18).weight(.bold))
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 320, height: 48)
+                            .background(Color(red: 0.93, green: 0.04, blue: 0.26))
+                            .cornerRadius(32)
+                            .padding(.bottom, 20) // Add spacing below the button
+                    }
                 }
                 
                 // "Already have an account? Sign In" text with NavigationLink
@@ -87,23 +91,28 @@ struct SignUpView: View {
             }
             .padding(.horizontal, 30) // Adjust padding as needed
         }
-        // .edgesIgnoringSafeArea(.all)
-        //.navigationTitle("Sign Up") // Ensure navigation title is set
     }
     
     // Function to handle sign up action
     private func signUp() {
+        profileData.name = name
+        profileData.username = username
+        profileData.email = email
+        profileData.password = password
+        
         print("Name: \(name)")
         print("Username: \(username)")
         print("Email: \(email)")
         print("Password: \(password)")
         
-        // Add your sign-up logic here, such as sending the data to a server or validating the input
+        showingPersonalProfile = true
     }
 }
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        NavigationView {
+            SignUpView()
+        }
     }
 }
