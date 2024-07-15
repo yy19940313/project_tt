@@ -14,8 +14,8 @@ class PubNubManager: ObservableObject {
 
     init() {
         let config = PubNubConfiguration(
-            publishKey: "pub-c-103f2e3d-20f4-4566-9834-4f27e22ce9bf",
-            subscribeKey: "sub-c-951337ae-413a-4170-8238-2da14599bab0",
+            publishKey: "fill",
+            subscribeKey: "fill",
             uuid: UserManager.shared.userID
         )
         self.pubnub = PubNub(configuration: config)
