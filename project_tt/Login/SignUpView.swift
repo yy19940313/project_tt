@@ -5,7 +5,8 @@ struct InputField: View {
     var placeholder: String
     @Binding var text: String
     var isSecure: Bool = false
-    
+    var errorMessage: String? = nil // Add an optional error message
+
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
@@ -15,11 +16,25 @@ struct InputField: View {
                     .padding()
                     .background(Color.white)
                     .cornerRadius(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color(red: 0.90, green: 0.91, blue: 0.93), lineWidth: 0.50)
+                    )
             } else {
                 TextField(placeholder, text: $text)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(8)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color(red: 0.90, green: 0.91, blue: 0.93), lineWidth: 0.50)
+                    )
+            }
+            if let errorMessage = errorMessage {
+                Text(errorMessage)
+                    .font(Font.custom("Rubik", size: 12).weight(.light))
+                    .foregroundColor(.red)
+                    .padding(.top, 2)
             }
         }
     }
@@ -32,7 +47,8 @@ struct SignUpView: View {
     @State private var password: String = ""
     @ObservedObject var profileData = ProfileData()
     @State private var showingPersonalProfile = false
-    
+    @State private var emailError: String? = nil // For storing email validation error message
+
     var body: some View {
         ZStack {
             // Background Color
@@ -40,27 +56,36 @@ struct SignUpView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-            
+
             VStack {
                 Spacer() // Adjust spacing as needed
-                
-                Image("logo_only") // Use the current image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100) // Adjust the size as needed
-                    .offset(x: -10) // Move logo to the left by 10 points
-                
+
+                HStack {
+                    Image("logo_only") // Use the current image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100) // Adjust the size as needed
+                        .offset(x: -10) // Move logo to the left by 10 points
+
+                    // App Name
+                    Text("Sip")
+                        .font(Font.custom("MerriweatherSans-Regular", size: 40).weight(.semibold))
+                        .lineSpacing(72)
+
+                }
+
                 // Name input fields
                 VStack(alignment: .leading, spacing: 12) {
                     InputField(label: "Name", placeholder: "Enter your name", text: $name)
                     InputField(label: "Username", placeholder: "Enter your username", text: $username)
-                    InputField(label: "Email Address", placeholder: "Enter your email", text: $email)
+                    InputField(label: "Email Address", placeholder: "Enter your email", text: $email, errorMessage: emailError)
                     InputField(label: "Password", placeholder: "Enter your password", text: $password, isSecure: true)
                 }
                 .padding(.horizontal, 30)
                 .padding(.bottom, 20)
-                
+
                 // Sign up button
+                /*
                 NavigationLink(destination: PersonalProfileView(profileData: profileData), isActive: $showingPersonalProfile) {
                     Button(action: {
                         signUp()
@@ -75,7 +100,8 @@ struct SignUpView: View {
                             .padding(.bottom, 20) // Add spacing below the button
                     }
                 }
-                
+                 */
+
                 // "Already have an account? Sign In" text with NavigationLink
                 NavigationLink(destination: SignInView()) {
                     Text("Already have an account? ")
@@ -86,28 +112,40 @@ struct SignUpView: View {
                 }
                 .foregroundColor(Color(red: 0, green: 0.15, blue: 0.29))
                 .padding(.top, 10)
-                
+
                 Spacer()
             }
             .padding(.horizontal, 30) // Adjust padding as needed
         }
     }
-    
+
     // Function to handle sign up action
     private func signUp() {
-        profileData.name = name
-        profileData.username = username
-        profileData.email = email
-        profileData.password = password
-        
-        print("Name: \(name)")
-        print("Username: \(username)")
-        print("Email: \(email)")
-        print("Password: \(password)")
-        
-        showingPersonalProfile = true
+        if isValidEmail(email) {
+            emailError = nil
+            profileData.name = name
+            profileData.username = username
+            profileData.email = email
+            profileData.password = password
+
+            print("Name: \(name)")
+            print("Username: \(username)")
+            print("Email: \(email)")
+            print("Password: \(password)")
+
+            showingPersonalProfile = true
+        } else {
+            emailError = "Email address format is incorrect"
+        }
+    }
+
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Z]{2,64}"
+        let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
 }
+
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {

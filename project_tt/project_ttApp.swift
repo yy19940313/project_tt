@@ -5,8 +5,12 @@
 //  Created by Yi Y on 7/11/24.
 //
 
-import SwiftUI
 
+
+/*
+ 
+import SwiftUI
+// proper loading screen
 @main
 struct project_ttApp: App {
 
@@ -16,5 +20,18 @@ struct project_ttApp: App {
         }
     }
 }
+*/
 
+import SwiftUI
 
+@main
+struct YourApp: App {
+    @StateObject private var userAuth = UserAuthModel()
+    
+    var body: some Scene {
+        WindowGroup {
+            LandingView()
+                .environmentObject(userAuth)
+        }
+    }
+}

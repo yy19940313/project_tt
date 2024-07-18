@@ -1,3 +1,4 @@
+
 import SwiftUI
 
 class ProfileData: ObservableObject {
@@ -11,3 +12,7 @@ class ProfileData: ObservableObject {
     @Published var createdChats: Int = 0
     @Published var profileUIImage: UIImage? = nil
 }
+
+
+
+

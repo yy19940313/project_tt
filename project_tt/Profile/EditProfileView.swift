@@ -1,3 +1,4 @@
+/*
 import SwiftUI
 
 struct EditProfileView: View {
@@ -132,3 +133,4 @@ struct EditProfileView_Previews: PreviewProvider {
         }
     }
 }
+*/

@@ -12,6 +12,7 @@ struct SignInView: View {
     @State private var password: String = ""
     @State private var showSignUp: Bool = false
     @State private var showHome: Bool = false // For navigation after successful login
+    @State private var showForgotPassword: Bool = false // For navigation to forgot password view
     
     var body: some View {
         NavigationView {
@@ -26,11 +27,19 @@ struct SignInView: View {
                 VStack {
                     Spacer() // Adjust spacing as needed
                     
-                    Image("logo_only") // Use the current image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100) // Adjust the size as needed
-                        .offset(x: -10) // Move logo to the left by 10 points
+                    HStack{
+                        Image("logo_only") // Use the current image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100) // Adjust the size as needed
+                            .offset(x: -10) // Move logo to the left by 10 points
+                        
+                        // App Name
+                        Text("Sip")
+                            .font(Font.custom("MerriweatherSans-Regular", size: 40).weight(.semibold))
+                            .lineSpacing(72)
+                        
+                    }
                     
                     // Email and Password input fields
                     VStack(alignment: .leading, spacing: 12) {
@@ -62,10 +71,23 @@ struct SignInView: View {
                                     RoundedRectangle(cornerRadius: 8)
                                         .stroke(Color(red: 0.90, green: 0.91, blue: 0.93), lineWidth: 0.50)
                                 )
+                                .padding(.bottom, 5)
+                            // "Forgot Password?" link
+                            HStack {
+                                NavigationLink(destination: ForgotPasswordView(), isActive: $showForgotPassword) {
+                                    Text("Forgot Password?")
+                                        .font(Font.custom("Rubik", size: 14).weight(.light))
+                                        .foregroundColor(Color.blue)
+                                }
+                                .padding(.horizontal, 5)
+                                Spacer() // Pushes the link to the left
+                            }
                         }
                     }
                     .padding(.horizontal, 30)
                     .padding(.bottom, 20)
+                    
+
                     
                     // Sign in button
                     Button(action: {
@@ -80,17 +102,20 @@ struct SignInView: View {
                             .cornerRadius(32)
                     }
                     .padding(.bottom, 20) // Add spacing below the button
+                
                     
                     // "Don't have an account? Sign Up" text
-                    
                     NavigationLink(destination: SignUpView(), isActive: $showSignUp) {
-                        Text("Don't have an account? ")
-                            .font(Font.custom("Rubik", size: 14).weight(.light)) +
-                        Text("Sign Up")
-                            .font(Font.custom("Rubik", size: 16).weight(.heavy))
-                            .foregroundColor(Color(red: 0.93, green: 0.04, blue: 0.26))// Increase font size and use heavier weight
+                        HStack {
+                            Text("Don't have an account? ")
+                                .font(Font.custom("Rubik", size: 14).weight(.light))
+                                .foregroundColor(Color(red: 0, green: 0.15, blue: 0.29))
+                            
+                            Text("Sign Up")
+                                .font(Font.custom("Rubik", size: 16).weight(.heavy))
+                                .foregroundColor(Color(red: 0.93, green: 0.04, blue: 0.26)) // Increase font size and use heavier weight
+                        }
                     }
-                    .foregroundColor(Color(red: 0, green: 0.15, blue: 0.29))
                     .padding(.top, 10)
                     
                     Spacer()
