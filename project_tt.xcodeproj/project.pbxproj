@@ -28,6 +28,19 @@
 		7905E8152C41BE1A0010648F /* Rubik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7905E8142C41BE1A0010648F /* Rubik.ttf */; };
 		7905E8182C41E3C10010648F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8172C41E3C10010648F /* DashboardView.swift */; };
 		7905E81A2C41F3D50010648F /* CreateOwnGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905E8192C41F3D50010648F /* CreateOwnGroupView.swift */; };
+		7966BB712C48F10D0092902E /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 7966BB702C48F10D0092902E /* Auth */; };
+		7966BB732C48F10D0092902E /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 7966BB722C48F10D0092902E /* Functions */; };
+		7966BB752C48F10D0092902E /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 7966BB742C48F10D0092902E /* PostgREST */; };
+		7966BB772C48F10D0092902E /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 7966BB762C48F10D0092902E /* Realtime */; };
+		7966BB792C48F10D0092902E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 7966BB782C48F10D0092902E /* Storage */; };
+		7966BB7B2C48F10D0092902E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7966BB7A2C48F10D0092902E /* Supabase */; };
+		7966BB7D2C48F1780092902E /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB7C2C48F1780092902E /* Supabase.swift */; };
+		7966BB802C48F27D0092902E /* ContentView_Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB7F2C48F27D0092902E /* ContentView_Supabase.swift */; };
+		7966BB822C498EC60092902E /* AuthView_Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB812C498EC60092902E /* AuthView_Supabase.swift */; };
+		7966BB842C498F1D0092902E /* ProfileView_Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB832C498F1D0092902E /* ProfileView_Supabase.swift */; };
+		7966BB862C4990130092902E /* Models_Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB852C4990130092902E /* Models_Supabase.swift */; };
+		7966BB882C4991100092902E /* AppView_Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB872C4991100092902E /* AppView_Supabase.swift */; };
+		7966BB8A2C4A388B0092902E /* CreateUser_Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB892C4A388B0092902E /* CreateUser_Supabase.swift */; };
 		797EB77A2C44523300601F61 /* GroupSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB7792C44523300601F61 /* GroupSettingView.swift */; };
 		797EB77C2C44590700601F61 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB77B2C44590700601F61 /* EditProfileView.swift */; };
 		797EB77E2C445B7200601F61 /* PersonalProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB77D2C445B7200601F61 /* PersonalProfileView.swift */; };
@@ -80,6 +93,13 @@
 		7905E8142C41BE1A0010648F /* Rubik.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rubik.ttf; sourceTree = "<group>"; };
 		7905E8172C41E3C10010648F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7905E8192C41F3D50010648F /* CreateOwnGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOwnGroupView.swift; sourceTree = "<group>"; };
+		7966BB7C2C48F1780092902E /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		7966BB7F2C48F27D0092902E /* ContentView_Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView_Supabase.swift; sourceTree = "<group>"; };
+		7966BB812C498EC60092902E /* AuthView_Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView_Supabase.swift; sourceTree = "<group>"; };
+		7966BB832C498F1D0092902E /* ProfileView_Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView_Supabase.swift; sourceTree = "<group>"; };
+		7966BB852C4990130092902E /* Models_Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models_Supabase.swift; sourceTree = "<group>"; };
+		7966BB872C4991100092902E /* AppView_Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView_Supabase.swift; sourceTree = "<group>"; };
+		7966BB892C4A388B0092902E /* CreateUser_Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser_Supabase.swift; sourceTree = "<group>"; };
 		797EB7792C44523300601F61 /* GroupSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingView.swift; sourceTree = "<group>"; };
 		797EB77B2C44590700601F61 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		797EB77D2C445B7200601F61 /* PersonalProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileView.swift; sourceTree = "<group>"; };
@@ -96,6 +116,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7966BB7B2C48F10D0092902E /* Supabase in Frameworks */,
+				7966BB792C48F10D0092902E /* Storage in Frameworks */,
+				7966BB752C48F10D0092902E /* PostgREST in Frameworks */,
+				7966BB732C48F10D0092902E /* Functions in Frameworks */,
+				7966BB712C48F10D0092902E /* Auth in Frameworks */,
+				7966BB772C48F10D0092902E /* Realtime in Frameworks */,
 				7903A9BE2C4742280065FFA5 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +191,12 @@
 				7986E53E2C438C3E00BD232B /* ChatView.swift */,
 				797EB7792C44523300601F61 /* GroupSettingView.swift */,
 				797EB7812C445D9600601F61 /* ImagePicker.swift */,
+				7966BB7F2C48F27D0092902E /* ContentView_Supabase.swift */,
+				7966BB812C498EC60092902E /* AuthView_Supabase.swift */,
+				7966BB832C498F1D0092902E /* ProfileView_Supabase.swift */,
+				7966BB852C4990130092902E /* Models_Supabase.swift */,
+				7966BB872C4991100092902E /* AppView_Supabase.swift */,
+				7966BB892C4A388B0092902E /* CreateUser_Supabase.swift */,
 			);
 			path = project_tt;
 			sourceTree = "<group>";
@@ -199,6 +231,7 @@
 			children = (
 				7903A9C52C475C5C0065FFA5 /* UserData.swift */,
 				7903A9C92C4786F20065FFA5 /* UserAuthModel.swift */,
+				7966BB7C2C48F1780092902E /* Supabase.swift */,
 			);
 			path = SDKs;
 			sourceTree = "<group>";
@@ -263,6 +296,12 @@
 			name = project_tt;
 			packageProductDependencies = (
 				7903A9BD2C4742280065FFA5 /* GoogleSignIn */,
+				7966BB702C48F10D0092902E /* Auth */,
+				7966BB722C48F10D0092902E /* Functions */,
+				7966BB742C48F10D0092902E /* PostgREST */,
+				7966BB762C48F10D0092902E /* Realtime */,
+				7966BB782C48F10D0092902E /* Storage */,
+				7966BB7A2C48F10D0092902E /* Supabase */,
 			);
 			productName = project_tt;
 			productReference = 7905E7DA2C40AFAA0010648F /* project_tt.app */;
@@ -338,6 +377,7 @@
 			mainGroup = 7905E7D12C40AFAA0010648F;
 			packageReferences = (
 				7903A9BC2C4742280065FFA5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				7966BB6F2C48F10D0092902E /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			productRefGroup = 7905E7DB2C40AFAA0010648F /* Products */;
 			projectDirPath = "";
@@ -384,21 +424,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7966BB822C498EC60092902E /* AuthView_Supabase.swift in Sources */,
 				7905E8082C40B3AF0010648F /* SignInView.swift in Sources */,
+				7966BB8A2C4A388B0092902E /* CreateUser_Supabase.swift in Sources */,
 				797EB77E2C445B7200601F61 /* PersonalProfileView.swift in Sources */,
 				7986E53F2C438C3E00BD232B /* ChatView.swift in Sources */,
+				7966BB882C4991100092902E /* AppView_Supabase.swift in Sources */,
 				797EB77A2C44523300601F61 /* GroupSettingView.swift in Sources */,
 				7905E80A2C40F7270010648F /* SignUpView.swift in Sources */,
+				7966BB7D2C48F1780092902E /* Supabase.swift in Sources */,
 				7905E80C2C41A52C0010648F /* LoadingView.swift in Sources */,
 				7903A9CC2C4858330065FFA5 /* LandingView.swift in Sources */,
+				7966BB842C498F1D0092902E /* ProfileView_Supabase.swift in Sources */,
 				797EB77C2C44590700601F61 /* EditProfileView.swift in Sources */,
 				7903A9C82C47869D0065FFA5 /* ContentView.swift in Sources */,
 				797EB7802C445C4D00601F61 /* ProfileData.swift in Sources */,
 				7905E8182C41E3C10010648F /* DashboardView.swift in Sources */,
 				7903A9C62C475C5C0065FFA5 /* UserData.swift in Sources */,
+				7966BB862C4990130092902E /* Models_Supabase.swift in Sources */,
 				7903A9C22C475A440065FFA5 /* SignInViewController.swift in Sources */,
 				797EB7822C445D9600601F61 /* ImagePicker.swift in Sources */,
 				7903A9CA2C4786F20065FFA5 /* UserAuthModel.swift in Sources */,
+				7966BB802C48F27D0092902E /* ContentView_Supabase.swift in Sources */,
 				7905E7DE2C40AFAA0010648F /* project_ttApp.swift in Sources */,
 				7903A9CE2C4867520065FFA5 /* ForgotPasswordView.swift in Sources */,
 				7905E81A2C41F3D50010648F /* CreateOwnGroupView.swift in Sources */,
@@ -752,6 +799,14 @@
 				version = 6.0.2;
 			};
 		};
+		7966BB6F2C48F10D0092902E /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -759,6 +814,36 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7903A9BC2C4742280065FFA5 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		7966BB702C48F10D0092902E /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7966BB6F2C48F10D0092902E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		7966BB722C48F10D0092902E /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7966BB6F2C48F10D0092902E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		7966BB742C48F10D0092902E /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7966BB6F2C48F10D0092902E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		7966BB762C48F10D0092902E /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7966BB6F2C48F10D0092902E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		7966BB782C48F10D0092902E /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7966BB6F2C48F10D0092902E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		7966BB7A2C48F10D0092902E /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7966BB6F2C48F10D0092902E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

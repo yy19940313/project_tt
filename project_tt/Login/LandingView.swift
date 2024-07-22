@@ -69,7 +69,6 @@ struct LandingView: View {
                     .padding(.bottom, 10) // Add spacing below the button
 
                     // Continue with Email button
-                    // Continue with Email button
                     NavigationLink(destination: SignInView()) {
                         HStack {
                             GeometryReader { geometry in
@@ -111,6 +110,16 @@ struct LandingView: View {
                     .padding(.top, 10)
                     
                     Spacer()
+                    
+                    // NavigationLink to PersonalProfileView
+                    NavigationLink(
+                        destination: PersonalProfileView()
+                            .environmentObject(userAuth), // Pass environment object
+                        isActive: $userAuth.showProfile
+                    ) {
+                        EmptyView()
+                    }
+
                 }
                 .padding(.horizontal, 30) // Adjust padding as needed
                 

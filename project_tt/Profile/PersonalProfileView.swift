@@ -1,7 +1,7 @@
 import SwiftUI
-/*
+
 struct PersonalProfileView: View {
-    @ObservedObject var userAuth: UserAuthModel // Use the UserAuthModel to get profile data
+    @EnvironmentObject var userAuth: UserAuthModel // Use the UserAuthModel to get profile data
     
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
@@ -85,6 +85,7 @@ struct PersonalProfileView: View {
             Spacer()
             
             // Edit Profile button
+            /*
             NavigationLink(destination: EditProfileView(userAuth: userAuth)) {
                 Text("Edit Profile")
                     .font(.headline)
@@ -96,6 +97,7 @@ struct PersonalProfileView: View {
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
+            */
         }
         .padding(.horizontal, 20)
         .navigationBarTitle("Personal Profile", displayMode: .inline)
@@ -105,8 +107,8 @@ struct PersonalProfileView: View {
 struct PersonalProfileView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PersonalProfileView(userAuth: UserAuthModel())
+            PersonalProfileView().environmentObject(UserAuthModel())
         }
     }
 }
-*/
+

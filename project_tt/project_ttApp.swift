@@ -5,12 +5,11 @@
 //  Created by Yi Y on 7/11/24.
 //
 
-
+import SwiftUI
 
 /*
- 
-import SwiftUI
-// proper loading screen
+// start with loading page
+
 @main
 struct project_ttApp: App {
 
@@ -22,7 +21,9 @@ struct project_ttApp: App {
 }
 */
 
-import SwiftUI
+
+
+// start with landing page
 
 @main
 struct YourApp: App {
@@ -35,3 +36,17 @@ struct YourApp: App {
         }
     }
 }
+
+
+// start with landing page
+
+/*
+@main
+struct YourApp: App {
+    var body: some Scene {
+        WindowGroup {
+            AppView_Supabase()
+        }
+    }
+}
+*/

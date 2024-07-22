@@ -60,6 +60,7 @@ struct ContentView: View {
     }
 }
 
+
 // Preview provider to display ContentView in the Xcode preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -67,4 +68,5 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(UserAuthModel())  // Provide a UserAuthModel instance for the preview
     }
 }
+
 */
