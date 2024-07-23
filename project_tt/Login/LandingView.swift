@@ -93,6 +93,31 @@ struct LandingView: View {
                     }
                     .padding(.bottom, 10) // Add spacing below the button
                     
+                    // Continue with visitor button
+                    NavigationLink(destination: DashboardView()) {
+                        HStack {
+                            GeometryReader { geometry in
+                                HStack {
+                                    Image("email_icon") // Use the Email icon
+                                        .resizable()
+                                        .frame(width: 24, height: 24) // Adjust the size as needed
+                                    Spacer()
+                                        .frame(width: 8) // Adjust the space between icon and text
+                                    Text("Continue as a Visitor")
+                                        .font(Font.custom("Rubik", size: 18).weight(.semibold))
+                                        .foregroundColor(.black) // Text color black
+                                }
+                                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+                            }
+                        }
+                        .padding()
+                        .frame(width: 320, height: 48, alignment: .center)
+                        .background(Color.white) // Button background white
+                        .cornerRadius(32)
+                        .shadow(color: Color.gray.opacity(0.5), radius: 4, x: 0, y: 2) // Add shadow for better visibility
+                    }
+                    .padding(.bottom, 10) // Add spacing below the button
+                    
                     // "Don't have an account? Sign Up" text
                     NavigationLink(isActive: $showSignUp) {
                         SignUpView()
@@ -114,8 +139,8 @@ struct LandingView: View {
                     // NavigationLink to PersonalProfileView
                     NavigationLink(
                         destination: PersonalProfileView()
-                            .environmentObject(userAuth), // Pass environment object
-                        isActive: $userAuth.showProfile
+                          //  .environmentObject(userAuth), // Pass environment object
+                        //isActive: $userAuth.showProfile
                     ) {
                         EmptyView()
                     }

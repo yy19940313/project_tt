@@ -1,11 +1,12 @@
 import SwiftUI
 
-struct PersonalProfileView: View {
+struct PersonalProfileView_Auth: View {
+    @EnvironmentObject var userAuth: UserAuthModel // Use the UserAuthModel to get profile data
     
     var body: some View {
         VStack(alignment: .center, spacing: 16) {
             // Profile image
-            if let url = URL(string: "https://example.com/profilePicUrl") {
+            if let url = URL(string: userAuth.profilePicUrl) {
                 AsyncImage(url: url)
                     .scaledToFill()
                     .frame(width: 100, height: 100)
@@ -26,7 +27,7 @@ struct PersonalProfileView: View {
                     .font(.headline)
                     .foregroundColor(Color.black)
                 Spacer()
-                Text("John Doe")
+                Text("\(userAuth.givenName) \(userAuth.familyName)")
                     .font(.subheadline)
                     .foregroundColor(Color.gray)
             }
@@ -37,7 +38,7 @@ struct PersonalProfileView: View {
                     .font(.headline)
                     .foregroundColor(Color.black)
                 Spacer()
-                Text("johndoe123")
+                Text(userAuth.username)
                     .font(.subheadline)
                     .foregroundColor(Color.gray)
             }
@@ -48,7 +49,7 @@ struct PersonalProfileView: View {
                     .font(.headline)
                     .foregroundColor(Color.black)
                 Spacer()
-                Text("Bio goes here...")
+                Text("Bio goes here...") // Replace with actual bio if available
                     .font(.subheadline)
                     .foregroundColor(Color.gray)
             }
@@ -58,7 +59,7 @@ struct PersonalProfileView: View {
                 VStack {
                     Text("Subscribed Chats")
                         .font(.headline)
-                    Text("0")
+                    Text("0") // Replace with actual count if available
                         .font(.subheadline)
                         .foregroundColor(Color.gray)
                 }
@@ -66,7 +67,7 @@ struct PersonalProfileView: View {
                 VStack {
                     Text("Followed People")
                         .font(.headline)
-                    Text("0")
+                    Text("0") // Replace with actual count if available
                         .font(.subheadline)
                         .foregroundColor(Color.gray)
                 }
@@ -74,7 +75,7 @@ struct PersonalProfileView: View {
                 VStack {
                     Text("Chats Created")
                         .font(.headline)
-                    Text("0")
+                    Text("0") // Replace with actual count if available
                         .font(.subheadline)
                         .foregroundColor(Color.gray)
                 }
@@ -83,9 +84,9 @@ struct PersonalProfileView: View {
             
             Spacer()
             
-            // Edit Profile button (commented out)
+            // Edit Profile button
             /*
-            NavigationLink(destination: EditProfileView()) {
+            NavigationLink(destination: EditProfileView(userAuth: userAuth)) {
                 Text("Edit Profile")
                     .font(.headline)
                     .foregroundColor(.white)
@@ -103,10 +104,12 @@ struct PersonalProfileView: View {
     }
 }
 
+/*
 struct PersonalProfileView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PersonalProfileView()
+            PersonalProfileView_Auth().environmentObject(UserAuthModel())
         }
     }
 }
+*/
