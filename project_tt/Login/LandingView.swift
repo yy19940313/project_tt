@@ -1,5 +1,7 @@
 import SwiftUI
 
+
+
 struct LandingView: View {
     @State private var email: String = ""
     @State private var password: String = ""
@@ -94,7 +96,7 @@ struct LandingView: View {
                     .padding(.bottom, 10) // Add spacing below the button
                     
                     // Continue with visitor button
-                    NavigationLink(destination: DashboardView()) {
+                    NavigationLink(destination: HomeView(activePage: .constant(.home))) {
                         HStack {
                             GeometryReader { geometry in
                                 HStack {
@@ -135,15 +137,6 @@ struct LandingView: View {
                     .padding(.top, 10)
                     
                     Spacer()
-                    
-                    // NavigationLink to PersonalProfileView
-                    NavigationLink(
-                        destination: PersonalProfileView()
-                          //  .environmentObject(userAuth), // Pass environment object
-                        //isActive: $userAuth.showProfile
-                    ) {
-                        EmptyView()
-                    }
 
                 }
                 .padding(.horizontal, 30) // Adjust padding as needed

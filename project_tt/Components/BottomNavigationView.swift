@@ -1,60 +1,70 @@
 import SwiftUI
 
 struct BottomNavigationView: View {
-    
+    @Binding var activePage: ActivePage
+
     var body: some View {
         HStack {
-            NavigationLink(destination: DashboardView()) {
+            Button(action: {
+                activePage = .home
+                print("Active Page set to: \(activePage)")
+            }) {
                 VStack {
                     Image(systemName: "message")
-                        .font(.system(size: 20)) // Adjusted icon size
-                        .foregroundColor(.gray) // Color for icons
-                    Text("Chats")
-                        .font(.system(size: 14)) // Adjusted font size
-                        .foregroundColor(.gray) // Color for text
+                        .font(.system(size: 20))
+                        .foregroundColor(activePage == .home ? .black : .gray)
+                    Text("Home")
+                        .font(.system(size: 14))
+                        .foregroundColor(activePage == .home ? .black : .gray)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure full width and height for touch area
-                .contentShape(Rectangle()) // Make the entire area tappable
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .contentShape(Rectangle())
             }
             
-            NavigationLink(destination: PersonalProfileView()) {
+            Button(action: {
+                activePage = .discover
+                print("Active Page set to: \(activePage)")
+            }) {
                 VStack {
                     Image(systemName: "magnifyingglass")
-                        .font(.system(size: 20)) // Adjusted icon size
-                        .foregroundColor(.gray) // Color for icons
-                    Text("Explore")
-                        .font(.system(size: 14)) // Adjusted font size
-                        .foregroundColor(.gray) // Color for text
+                        .font(.system(size: 20))
+                        .foregroundColor(activePage == .discover ? .black : .gray)
+                    Text("Discover")
+                        .font(.system(size: 14))
+                        .foregroundColor(activePage == .discover ? .black : .gray)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure full width and height for touch area
-                .contentShape(Rectangle()) // Make the entire area tappable
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .contentShape(Rectangle())
             }
             
-            NavigationLink(destination: PersonalProfileView()) {
+            Button(action: {
+                activePage = .profile
+                print("Active Page set to: \(activePage)")
+            }) {
                 VStack {
                     Image(systemName: "person")
-                        .font(.system(size: 20)) // Adjusted icon size
-                        .foregroundColor(.gray) // Color for icons
+                        .font(.system(size: 20))
+                        .foregroundColor(activePage == .profile ? .black : .gray)
                     Text("Profile")
-                        .font(.system(size: 14)) // Adjusted font size
-                        .foregroundColor(.gray) // Color for text
+                        .font(.system(size: 14))
+                        .foregroundColor(activePage == .profile ? .black : .gray)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity) // Ensure full width and height for touch area
-                .contentShape(Rectangle()) // Make the entire area tappable
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .contentShape(Rectangle())
             }
         }
         .padding()
-        .frame(height: 60) // Set fixed height
-        .background(Color.white) // Set background color to FFFFFF
-        .shadow(color: .gray.opacity(0.4), radius: 3, x: 0, y: -1) // Optional: Add a shadow for better visibility
+        .frame(height: 60)
+        .background(Color.white)
         .edgesIgnoringSafeArea(.bottom)
     }
 }
 
+
 struct BottomNavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView { // Ensure NavigationView is present in the preview
-            BottomNavigationView()
+        NavigationView {
+            BottomNavigationView(activePage: .constant(.home))
                 .previewLayout(.sizeThatFits)
         }
     }

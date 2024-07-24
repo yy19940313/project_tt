@@ -1,6 +1,8 @@
+
 import SwiftUI
 
-struct DashboardView: View {
+struct HomeView: View {
+    @Binding var activePage: ActivePage
     
     var body: some View {
         GeometryReader { geometry in
@@ -14,7 +16,7 @@ struct DashboardView: View {
                         .offset(x: 10)
                     
                     Text("All Chats")
-                        .offset(x: 60)
+                        .offset(x: 75)
                         .font(Font.custom("MerriweatherSans-Regular", size: 16).weight(.semibold))
                     
                     Spacer()
@@ -46,13 +48,14 @@ struct DashboardView: View {
                 
                 Divider()
                 
-                BottomNavigationView()
+                BottomNavigationView(activePage: $activePage)
                     .padding()
                     .frame(height: geometry.size.height * 0.08) // Set height to 8% of screen height
                     .background(Color.white) // Set background color to FFFFFF
             }
         }
         .edgesIgnoringSafeArea(.bottom)
+        .navigationBarHidden(true) // Hides the navigation bar
     }
 }
 
@@ -91,10 +94,11 @@ struct GroupChatRow: View {
     }
 }
 
-struct DashboardView_Previews: PreviewProvider {
+ 
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DashboardView()
+            HomeView(activePage: .constant(.home))
         }
     }
 }
