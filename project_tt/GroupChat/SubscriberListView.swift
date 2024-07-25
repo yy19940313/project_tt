@@ -1,11 +1,18 @@
+//
+//  SubscriberListView.swift
+//  project_tt
+//
+//  Created by Yi Y on 7/24/24.
+//
+
 import SwiftUI
 
-struct FollowersListView: View {
+struct SubscriberListView: View {
     @State private var showingActionSheet = false
     @State private var selectedUser: User? = nil
 
     var body: some View {
-        List(followers) { user in
+        List(subscribers) { user in
             HStack {
                 Image(systemName: "person.circle.fill")
                     .resizable()
@@ -37,7 +44,7 @@ struct FollowersListView: View {
                         title: Text("Options"),
                         message: Text("What do you want to do?"),
                         buttons: [
-                            .destructive(Text("Remove Follower")) {
+                            .destructive(Text("Remove Subscriber")) {
                                 // Handle remove action
                                 print("Remove \(selectedUser?.name ?? "")")
                             },
@@ -52,7 +59,7 @@ struct FollowersListView: View {
             }
             .padding(.vertical, 5)
         }
-        .navigationTitle("Followers")
+        .navigationTitle("Subscribers")
         .listStyle(PlainListStyle()) // Optional: Use plain style if default style adds padding
         .listRowInsets(EdgeInsets()) // Remove extra padding around rows
     }
@@ -60,21 +67,18 @@ struct FollowersListView: View {
 
 
 // Sample data for followers
-let followers = [
-    User(handle: "@follower1", name: "Follower 1"),
-    User(handle: "@follower2", name: "Follower 2"),
-    User(handle: "@follower3", name: "Follower 3"),
-    User(handle: "@follower4", name: "Follower 4"),
-    User(handle: "@follower5", name: "Follower 5"),
-    User(handle: "@follower6", name: "Follower 6"),
-    User(handle: "@follower7", name: "Follower 7"),
-    User(handle: "@follower8", name: "Follower 8"),
-    User(handle: "@follower9", name: "Follower 9"),
-    User(handle: "@follower10", name: "Follower 10")
+let subscribers = [
+    User(handle: "@subscriber1", name: "Subscriber 1"),
+    User(handle: "@subscriber2", name: "Subscriber 2"),
+    User(handle: "@subscriber3", name: "Subscriber 3"),
+    User(handle: "@subscriber4", name: "Subscriber 4"),
+    User(handle: "@subscriber5", name: "Subscriber 5"),
+    User(handle: "@subscriber6", name: "Subscriber 6"),
+    User(handle: "@subscriber7", name: "Subscriber 7"),
+    User(handle: "@subscriber8", name: "Subscriber 8"),
+    User(handle: "@subscriber9", name: "Subscriber 9"),
+    User(handle: "@subscriber10", name: "Subscriber 10")
 ]
-
-struct FollowersListView_Previews: PreviewProvider {
-    static var previews: some View {
-        FollowersListView()
-    }
+#Preview {
+    SubscriberListView()
 }

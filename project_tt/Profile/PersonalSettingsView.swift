@@ -44,14 +44,17 @@ struct PersonalSettingsView: View {
                     }
                 }
                 
-                
-                
             }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Settings")
-        }
+            .listStyle(PlainListStyle())
+            .navigationBarTitle(Text("Settings").font(.title), displayMode: .inline)
+            .background(Color.white.edgesIgnoringSafeArea(.all)) // Set the background color for the entire view
+            .background(Color.white) // Set the background color of the list
+        } // end Navigation View
+        .font(Font.custom("Rubik", size: 14).weight(.regular))
     }
+    
 }
+
 
 struct PersonalSettingsView_Previews: PreviewProvider {
     static var previews: some View {

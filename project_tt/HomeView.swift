@@ -7,34 +7,9 @@ struct HomeView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                // Navigation Bar
-                HStack {
-                    Image("logo_name") // Use the current image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 80, height: 50) // Adjust the size as needed
-                        .offset(x: 10)
-                    
-                    Text("All Chats")
-                        .offset(x: 75)
-                        .font(Font.custom("MerriweatherSans-Regular", size: 16).weight(.semibold))
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        // Add new chat action
-                    }) {
-                        Image(systemName: "plus")
-                            .font(.title)
-                            .foregroundColor(Color(red: 0.93, green: 0.04, blue: 0.26)) // Added color ED0942
-                    }
-                    .padding(.trailing, 20)
-                }
-                .padding(.top, 0)
-                .padding(.bottom, 0)
-                
-                Divider()
-                
+                // Top Navigation Bar
+                TopNavigation(title: "Chats")
+                                
                 // Chats List
                 List {
                     GroupChatRow(chatName: "Family Group", latestMessage: "Hello everyone!", sender: "Alice:", iconName: "person.2.square") // Modified
@@ -46,18 +21,18 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                Divider()
                 
                 BottomNavigationView(activePage: $activePage)
                     .padding()
                     .frame(height: geometry.size.height * 0.08) // Set height to 8% of screen height
                     .background(Color.white) // Set background color to FFFFFF
-            }
-        }
+            } // ending VStack
+            .navigationBarHidden(true) // Hides the navigation bar
+        } //ending GeometryReader
         .edgesIgnoringSafeArea(.bottom)
-        .navigationBarHidden(true) // Hides the navigation bar
-    }
-}
+        
+    } //ending var body: some View
+} // ending homeview
 
 struct GroupChatRow: View {
     let chatName: String
@@ -76,14 +51,15 @@ struct GroupChatRow: View {
                 
                 VStack(alignment: .leading) { // Modified
                     Text(chatName)
-                        .font(.headline)
+                        .font(Font.custom("Rubik", size: 16).weight(.regular))
                         .foregroundColor(.black)
                     
                     HStack {
                         Text(sender)
-                            .font(.subheadline)
+                            .font(Font.custom("Rubik", size: 14).weight(.regular))
                             .foregroundColor(.gray)
                         Text(latestMessage)
+                            .font(Font.custom("Rubik", size: 14).weight(.regular))
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }
@@ -94,7 +70,8 @@ struct GroupChatRow: View {
     }
 }
 
- 
+
+
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
@@ -102,3 +79,4 @@ struct HomeView_Previews: PreviewProvider {
         }
     }
 }
+

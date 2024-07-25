@@ -96,7 +96,7 @@ struct LandingView: View {
                     .padding(.bottom, 10) // Add spacing below the button
                     
                     // Continue with visitor button
-                    NavigationLink(destination: HomeView(activePage: .constant(.home))) {
+                    NavigationLink(destination: ParentView()) {
                         HStack {
                             GeometryReader { geometry in
                                 HStack {

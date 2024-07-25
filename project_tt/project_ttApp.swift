@@ -23,20 +23,22 @@ struct project_ttApp: App {
 
 
 
+
 // start with landing page
 
 @main
 struct YourApp: App {
     @StateObject private var userAuth = UserAuthModel()
-    
+
     var body: some Scene {
         WindowGroup {
-            LandingView()
-                .environmentObject(userAuth)
+                LandingView()
+                    .environmentObject(userAuth)
         }
     }
 }
 
+        
 
 // start with landing page
 

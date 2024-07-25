@@ -64,7 +64,7 @@ struct BottomNavigationView: View {
 struct BottomNavigationView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            BottomNavigationView(activePage: .constant(.home))
+            BottomNavigationView(activePage: .constant(.discover))
                 .previewLayout(.sizeThatFits)
         }
     }

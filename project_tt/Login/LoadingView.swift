@@ -18,7 +18,7 @@ struct LoadingView: View {
         Group {
             if isActive {
                 NavigationView {
-                    SignInView()
+                    LandingView()
                 }
             } else {
                 ZStack {

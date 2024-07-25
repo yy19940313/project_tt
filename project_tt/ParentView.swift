@@ -8,7 +8,6 @@
 import Combine
 import SwiftUI
 
-
 // The enum defines the possible states (pages).
 enum ActivePage {
     case home
@@ -17,12 +16,8 @@ enum ActivePage {
 }
 
 struct ParentView: View {
-    @State private var activePage: ActivePage
+    @State private var activePage: ActivePage = .home
     
-    init(activePage: ActivePage = .home) {
-        _activePage = State(initialValue: activePage)
-    }
-
     var body: some View {
         NavigationView {
             VStack {
@@ -34,16 +29,14 @@ struct ParentView: View {
                 case .profile:
                     PersonalProfileView(activePage: $activePage)
                 }
-                // Bottom navigation bar
-                BottomNavigationView(activePage: $activePage)
-                    .padding(.bottom, 10) // Optional: Padding for aesthetics
+
             }
-            .navigationBarHidden(true)
-        }
+        }.navigationBarHidden(true)
     }
 }
 
 
+/*
 struct ParentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -58,3 +51,4 @@ struct ParentView_Previews: PreviewProvider {
         }
     }
 }
+*/

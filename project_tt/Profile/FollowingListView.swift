@@ -16,15 +16,15 @@ struct FollowingListView: View {
             HStack {
                 Image(systemName: "person.circle.fill")
                     .resizable()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 40, height: 40)
                     .foregroundColor(.gray)
 
                 VStack(alignment: .leading) {
                     Text(user.handle)
-                        .font(.headline)
+                        .font(Font.custom("Rubik", size: 16).weight(.regular))
 
                     Text(user.name)
-                        .font(.subheadline)
+                        .font(Font.custom("Rubik", size: 16).weight(.regular))
                         .foregroundColor(.gray)
                 }
                 .padding(.leading, 10)
@@ -36,7 +36,7 @@ struct FollowingListView: View {
                     showingActionSheet = true
                 }) {
                     Image(systemName: "ellipsis")
-                        .font(.title)
+                        .frame(width: 30, height: 30)
                         .foregroundColor(.gray)
                 }
                 .actionSheet(isPresented: $showingActionSheet) {
@@ -60,6 +60,8 @@ struct FollowingListView: View {
             .padding(.vertical, 5)
         }
         .navigationTitle("Following")
+        .listStyle(PlainListStyle()) // Optional: Use plain style if default style adds padding
+        .listRowInsets(EdgeInsets()) // Remove extra padding around rows
     }
 }
 
@@ -73,7 +75,14 @@ struct User: Identifiable {
 let users = [
     User(handle: "@handle1", name: "Name 1"),
     User(handle: "@handle2", name: "Name 2"),
-    User(handle: "@handle3", name: "Name 3")
+    User(handle: "@handle3", name: "Name 3"),
+    User(handle: "@handle1", name: "Name 4"),
+    User(handle: "@handle2", name: "Name 5"),
+    User(handle: "@handle3", name: "Name 6"),
+    User(handle: "@handle1", name: "Name 7"),
+    User(handle: "@handle2", name: "Name 8"),
+    User(handle: "@handle3", name: "Name 9"),
+    User(handle: "@handle3", name: "Name 10"),
 ]
 
 struct FollowingListView_Previews: PreviewProvider {
