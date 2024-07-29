@@ -32,7 +32,6 @@
 		7946C9FE2C5084B300D42EFB /* PersonalProfileView_Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946C9F92C5084B300D42EFB /* PersonalProfileView_Auth.swift */; };
 		7946CA002C5084E900D42EFB /* FollowingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946C9FF2C5084E900D42EFB /* FollowingListView.swift */; };
 		7946CA022C5086D300D42EFB /* FollowerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946CA012C5086D300D42EFB /* FollowerListView.swift */; };
-		7946CA042C50C76D00D42EFB /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946CA032C50C76D00D42EFB /* ParentView.swift */; };
 		7946CA082C50CECD00D42EFB /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946CA072C50CECD00D42EFB /* DiscoverView.swift */; };
 		7946CA0A2C50D35600D42EFB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946CA092C50D35600D42EFB /* HomeView.swift */; };
 		7946CA122C50D92900D42EFB /* ProfileView_Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946CA0C2C50D92900D42EFB /* ProfileView_Supabase.swift */; };
@@ -56,9 +55,12 @@
 		7966BB792C48F10D0092902E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 7966BB782C48F10D0092902E /* Storage */; };
 		7966BB7B2C48F10D0092902E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7966BB7A2C48F10D0092902E /* Supabase */; };
 		7966BB7D2C48F1780092902E /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB7C2C48F1780092902E /* Supabase.swift */; };
-		7966BB8D2C4F27E30092902E /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966BB8C2C4F27E30092902E /* BottomNavigationView.swift */; };
 		797EB7822C445D9600601F61 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797EB7812C445D9600601F61 /* ImagePicker.swift */; };
 		797EB7872C44952600601F61 /* project-tt-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 797EB7862C44952600601F61 /* project-tt-Info.plist */; };
+		799183EC2C576C6900648E06 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799183EB2C576C6900648E06 /* MainView.swift */; };
+		799183EE2C57701F00648E06 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799183ED2C57701F00648E06 /* Model.swift */; };
+		799183F02C57767200648E06 /* ProfileTopNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799183EF2C57767200648E06 /* ProfileTopNavigation.swift */; };
+		799183F22C577AED00648E06 /* EditProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799183F12C577AED00648E06 /* EditProfileButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +110,6 @@
 		7946C9F92C5084B300D42EFB /* PersonalProfileView_Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalProfileView_Auth.swift; sourceTree = "<group>"; };
 		7946C9FF2C5084E900D42EFB /* FollowingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingListView.swift; sourceTree = "<group>"; };
 		7946CA012C5086D300D42EFB /* FollowerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListView.swift; sourceTree = "<group>"; };
-		7946CA032C50C76D00D42EFB /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		7946CA072C50CECD00D42EFB /* DiscoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		7946CA092C50D35600D42EFB /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7946CA0C2C50D92900D42EFB /* ProfileView_Supabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView_Supabase.swift; sourceTree = "<group>"; };
@@ -126,9 +127,12 @@
 		7946CA262C51E82F00D42EFB /* SubscriberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberListView.swift; sourceTree = "<group>"; };
 		7946CA282C51E99000D42EFB /* GroupInfoTopNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInfoTopNavigation.swift; sourceTree = "<group>"; };
 		7966BB7C2C48F1780092902E /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
-		7966BB8C2C4F27E30092902E /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
 		797EB7812C445D9600601F61 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		797EB7862C44952600601F61 /* project-tt-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "project-tt-Info.plist"; sourceTree = "<group>"; };
+		799183EB2C576C6900648E06 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		799183ED2C57701F00648E06 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		799183EF2C57767200648E06 /* ProfileTopNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTopNavigation.swift; sourceTree = "<group>"; };
+		799183F12C577AED00648E06 /* EditProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileButton.swift; sourceTree = "<group>"; };
 		D851078BF8D065D0CF21C4F8 /* Pods_project_tt_project_ttUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_tt_project_ttUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBC528C38A21E7CF9DCFEEC /* Pods_project_tt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_project_tt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -214,7 +218,8 @@
 				7905E7E12C40AFAB0010648F /* Assets.xcassets */,
 				7905E7E32C40AFAB0010648F /* Preview Content */,
 				797EB7812C445D9600601F61 /* ImagePicker.swift */,
-				7946CA032C50C76D00D42EFB /* ParentView.swift */,
+				799183EB2C576C6900648E06 /* MainView.swift */,
+				799183ED2C57701F00648E06 /* Model.swift */,
 			);
 			path = project_tt;
 			sourceTree = "<group>";
@@ -294,11 +299,12 @@
 		7966BB8B2C4F27CF0092902E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				7966BB8C2C4F27E30092902E /* BottomNavigationView.swift */,
 				7946CA1A2C51C68400D42EFB /* TopNavigation.swift */,
 				7946CA212C51E02C00D42EFB /* BioView.swift */,
 				7946CA232C51E1F300D42EFB /* Button_Subscribe.swift */,
 				7946CA282C51E99000D42EFB /* GroupInfoTopNavigation.swift */,
+				799183EF2C57767200648E06 /* ProfileTopNavigation.swift */,
+				799183F12C577AED00648E06 /* EditProfileButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -486,6 +492,9 @@
 				7946C9FE2C5084B300D42EFB /* PersonalProfileView_Auth.swift in Sources */,
 				7946CA242C51E1F300D42EFB /* Button_Subscribe.swift in Sources */,
 				7905E8082C40B3AF0010648F /* SignInView.swift in Sources */,
+				799183F22C577AED00648E06 /* EditProfileButton.swift in Sources */,
+				799183EC2C576C6900648E06 /* MainView.swift in Sources */,
+				799183EE2C57701F00648E06 /* Model.swift in Sources */,
 				7946CA082C50CECD00D42EFB /* DiscoverView.swift in Sources */,
 				7946CA122C50D92900D42EFB /* ProfileView_Supabase.swift in Sources */,
 				7946CA192C51BF1000D42EFB /* SubscribingListView.swift in Sources */,
@@ -503,7 +512,6 @@
 				7903A9C82C47869D0065FFA5 /* ContentView.swift in Sources */,
 				7903A9C62C475C5C0065FFA5 /* UserData.swift in Sources */,
 				7903A9C22C475A440065FFA5 /* SignInViewController.swift in Sources */,
-				7946CA042C50C76D00D42EFB /* ParentView.swift in Sources */,
 				7946CA002C5084E900D42EFB /* FollowingListView.swift in Sources */,
 				797EB7822C445D9600601F61 /* ImagePicker.swift in Sources */,
 				7903A9CA2C4786F20065FFA5 /* UserAuthModel.swift in Sources */,
@@ -514,9 +522,9 @@
 				7903A9CE2C4867520065FFA5 /* ForgotPasswordView.swift in Sources */,
 				7946CA162C50D92900D42EFB /* AppView_Supabase.swift in Sources */,
 				7946C9FC2C5084B300D42EFB /* PersonalProfileView.swift in Sources */,
+				799183F02C57767200648E06 /* ProfileTopNavigation.swift in Sources */,
 				7946C9FD2C5084B300D42EFB /* ProfileData.swift in Sources */,
 				7903A9D02C4892490065FFA5 /* CreateUsername.swift in Sources */,
-				7966BB8D2C4F27E30092902E /* BottomNavigationView.swift in Sources */,
 				7946CA222C51E02C00D42EFB /* BioView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,6 +701,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -724,6 +733,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

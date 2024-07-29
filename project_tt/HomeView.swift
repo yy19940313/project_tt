@@ -2,10 +2,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Binding var activePage: ActivePage
     
     var body: some View {
-        GeometryReader { geometry in
             VStack {
                 // Top Navigation Bar
                 TopNavigation(title: "Chats")
@@ -20,16 +18,10 @@ struct HomeView: View {
                 .listStyle(PlainListStyle())
                 
                 Spacer()
-                
-                
-                BottomNavigationView(activePage: $activePage)
-                    .padding()
-                    .frame(height: geometry.size.height * 0.08) // Set height to 8% of screen height
-                    .background(Color.white) // Set background color to FFFFFF
+
             } // ending VStack
             .navigationBarHidden(true) // Hides the navigation bar
-        } //ending GeometryReader
-        .edgesIgnoringSafeArea(.bottom)
+            .edgesIgnoringSafeArea(.bottom)
         
     } //ending var body: some View
 } // ending homeview
@@ -75,7 +67,7 @@ struct GroupChatRow: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            HomeView(activePage: .constant(.home))
+            HomeView()
         }
     }
 }

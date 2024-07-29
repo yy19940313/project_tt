@@ -12,7 +12,6 @@ struct LandingView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                
                 // Background Image
                 Image("background")
                     .resizable()
@@ -21,6 +20,7 @@ struct LandingView: View {
                 
                 VStack {
                     Spacer() // Adjust spacing as needed
+                    
                     HStack{
                         Image("logo_only") // Use the current image
                             .resizable()
@@ -96,7 +96,7 @@ struct LandingView: View {
                     .padding(.bottom, 10) // Add spacing below the button
                     
                     // Continue with visitor button
-                    NavigationLink(destination: ParentView()) {
+                    NavigationLink(destination: HomeView()) {
                         HStack {
                             GeometryReader { geometry in
                                 HStack {

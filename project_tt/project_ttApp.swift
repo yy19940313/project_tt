@@ -27,7 +27,7 @@ struct project_ttApp: App {
 // start with landing page
 
 @main
-struct YourApp: App {
+struct project_ttApp: App {
     @StateObject private var userAuth = UserAuthModel()
 
     var body: some Scene {

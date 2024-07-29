@@ -4,35 +4,11 @@ import SwiftUI
 
 struct PersonalProfileView: View {
     @State private var showingSettings = false
-    @Binding var activePage: ActivePage
     
     var body: some View {
-        ZStack {
-            // Background Image
-            Image("background")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            
             VStack {
                 // Top bar
-                HStack {
-                    Spacer()
-                    
-                    Button(action: {
-                        showingSettings.toggle()
-                    }) {
-                        Image(systemName: "list.bullet")
-                            .font(.system(size: 22)) // Set a smaller size, for example, 15
-                            .foregroundColor(Color(red: 0.93, green: 0.04, blue: 0.26)) // Added color ED0942
-                    }
-                    .padding(.trailing, 20)
-                    .sheet(isPresented: $showingSettings) {
-                        PersonalSettingsView()
-                            .presentationDetents([.fraction(2/3)]) // Set the height of the modal to 2/3 of the screen
-                    }
-                }
-                .padding(.top, 40) // Ensure there's enough space from the top
+                ProfileTopNavigation()
                 
                 // Profile Picture with Ellipse
                 VStack {
@@ -76,25 +52,12 @@ struct PersonalProfileView: View {
                 BioView(bioText: "Viverra aliquet eget sit amet tellus cras adipiscing enim.")
                 
                 // edit profile button
-                VStack {
-                    Text("Edit Profile")
-                        .font(Font.custom("Rubik", size: 18).weight(.medium))
-                        .foregroundColor(Color(red: 0, green: 0.15, blue: 0.29))
-                        .frame(width: 200, height: 30)
-                        .background(Color.green.opacity(0.7))
-                        .cornerRadius(32)
-                }
-                .padding()
-                
+                EditProfileButton()
+
                 Spacer()
-                
-                // Bottom Navigation
-                BottomNavigationView(activePage: $activePage)
-                    .padding()
-                    .background(Color.white) // Set background color to FFFFFF
+
             }
             .navigationBarHidden(true)
-        } // ending ZStack
         .edgesIgnoringSafeArea(.bottom)
     } // ending var body
 } // ending PersonalProfileView
@@ -127,7 +90,7 @@ struct StatView: View {
 struct PersonalProfileView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PersonalProfileView(activePage: .constant(.profile))
+            PersonalProfileView()
         }
     }
 }

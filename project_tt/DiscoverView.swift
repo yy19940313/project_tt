@@ -1,11 +1,9 @@
 import SwiftUI
 
 struct DiscoverView: View {
-    @Binding var activePage: ActivePage
     @State private var searchText: String = ""
     
     var body: some View {
-        GeometryReader { geometry in
             VStack {
                 // Top Navigation and Search Bar
                 TopNavigation(title: "Discover")
@@ -35,14 +33,9 @@ struct DiscoverView: View {
                 
                 Spacer()
                 
-                
-                BottomNavigationView(activePage: $activePage)
-                    .padding()
-                    .frame(height: geometry.size.height * 0.08) // Set height to 8% of screen height
-                    .background(Color.white) // Set background color to FFFFFF
+
             }
             .navigationBarHidden(true) // Hides the navigation bar
-        }
         .edgesIgnoringSafeArea(.bottom)
         
     }
@@ -82,7 +75,7 @@ struct DiscoverItemRow: View {
 struct DiscoverView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DiscoverView(activePage: .constant(.discover))
+            DiscoverView()
         }
     }
 }
