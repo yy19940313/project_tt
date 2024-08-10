@@ -20,6 +20,8 @@ struct ForgotPasswordView: View {
             VStack {
                 
 
+                Spacer()
+                    .frame(height: 150)
                 
                 Text("Forgot Password")
                     .font(Font.custom("Rubik", size: 24).weight(.bold))

@@ -27,19 +27,9 @@ struct SignInView: View {
                 VStack {
                     Spacer() // Adjust spacing as needed
                     
-                    HStack{
-                        Image("logo_only") // Use the current image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100) // Adjust the size as needed
-                            .offset(x: -10) // Move logo to the left by 10 points
-                        
-                        // App Name
-                        Text("Sip")
-                            .font(Font.custom("MerriweatherSans-Regular", size: 40).weight(.semibold))
-                            .lineSpacing(72)
-                        
-                    }
+                    Text("Welcome Back to Sip")
+                        .font(Font.custom("Rubik", size: 24).weight(.bold))
+                        .padding(.bottom, 20)
                     
                     // Email and Password input fields
                     VStack(alignment: .leading, spacing: 12) {

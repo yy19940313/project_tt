@@ -1,56 +1,69 @@
 
 import SwiftUI
 
+
 struct UsernameSettingView: View {
-    @EnvironmentObject var userAuth: UserAuthModel
-    @State private var newUsername: String = ""
-    @State private var errorMessage: String?
-
+    @State private var username: String = ""
+    
     var body: some View {
-        VStack {
-            TextField("Enter your username", text: $newUsername)
-                .padding()
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            
-            if let errorMessage = errorMessage {
-                Text(errorMessage)
-                    .foregroundColor(.red)
-                    .padding()
-            }
 
-            Button(action: {
-                // Validate the username
-                if newUsername.isEmpty {
-                    errorMessage = "Username cannot be empty"
-                    return
-                }
+        ZStack{
+            Image("background")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                
 
-                // Simulate a network request to check if the username is taken
-                // This is where you would normally integrate your backend call
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    if newUsername == "takenUsername" {
-                        errorMessage = "Username is already taken"
-                    } else {
-                        userAuth.username = newUsername
-                        userAuth.needsUsername = false
-                        userAuth.showProfile = true
-                    }
+                Spacer()
+                    .frame(height: 150)
+                
+                Text("Set Up Username")
+                    .font(Font.custom("Rubik", size: 24).weight(.bold))
+                    .padding(.bottom, 20)
+                
+                // Email input field
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Username")
+                        .font(Font.custom("Rubik", size: 14).weight(.light))
+                        .foregroundColor(Color(red: 0, green: 0.15, blue: 0.29).opacity(0.60))
+                    TextField("Enter your username", text: $username)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color(red: 0.90, green: 0.91, blue: 0.93), lineWidth: 0.50)
+                        )
                 }
-            }) {
-                Text("Set Username")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                .padding(.horizontal, 30)
+                .padding(.bottom, 20)
+                
+                // Reset Password button
+                Button(action: {
+                    // Add your reset password logic here
+                    print("Confirm: \(username)")
+                }) {
+                    Text("Confirm")
+                        .font(Font.custom("Rubik", size: 18).weight(.bold))
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 320, height: 48)
+                        .background(Color(red: 0.93, green: 0.04, blue: 0.26))
+                        .cornerRadius(32)
+                }
+                .padding(.top, 20)
+                
+                Spacer()
             }
-            .padding()
+            .padding(.horizontal, 30)
+            .padding(.top, 100)
         }
-        .padding()
-        .navigationBarTitle("Set Username", displayMode: .inline)
     }
 }
+
+
+
 
 struct UsernameSettingView_Previews: PreviewProvider {
     static var previews: some View {

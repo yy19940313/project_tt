@@ -60,19 +60,9 @@ struct SignUpView: View {
             VStack {
                 Spacer() // Adjust spacing as needed
 
-                HStack {
-                    Image("logo_only") // Use the current image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100) // Adjust the size as needed
-                        .offset(x: -10) // Move logo to the left by 10 points
-
-                    // App Name
-                    Text("Sip")
-                        .font(Font.custom("MerriweatherSans-Regular", size: 40).weight(.semibold))
-                        .lineSpacing(72)
-
-                }
+                Text("Create a Sip Account")
+                    .font(Font.custom("Rubik", size: 24).weight(.bold))
+                    .padding(.bottom, 20)
 
                 // Name input fields
                 VStack(alignment: .leading, spacing: 12) {
@@ -85,22 +75,20 @@ struct SignUpView: View {
                 .padding(.bottom, 20)
 
                 // Sign up button
-                /*
-                NavigationLink(destination: PersonalProfileView(profileData: profileData), isActive: $showingPersonalProfile) {
-                    Button(action: {
-                        signUp()
-                    }) {
-                        Text("Sign Up")
-                            .font(Font.custom("Rubik", size: 18).weight(.bold))
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(width: 320, height: 48)
-                            .background(Color(red: 0.93, green: 0.04, blue: 0.26))
-                            .cornerRadius(32)
-                            .padding(.bottom, 20) // Add spacing below the button
-                    }
+                // Reset Password button
+                Button(action: {
+                    // Add your reset password logic here
+                    print("Sign Up: \(email)")
+                }) {
+                    Text("Sign Up")
+                        .font(Font.custom("Rubik", size: 18).weight(.bold))
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 320, height: 48)
+                        .background(Color(red: 0.93, green: 0.04, blue: 0.26))
+                        .cornerRadius(32)
                 }
-                 */
+                .padding(.top, 20)
 
                 // "Already have an account? Sign In" text with NavigationLink
                 NavigationLink(destination: SignInView()) {
